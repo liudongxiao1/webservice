@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title></title>
+		<style type="text/css">
+			.header{
+				height: 70px;
+			widows: 100%;
+			display:flex;
+			align-items: center;
+			justify-content: center;
+			color: white;
+			background: wheat;
+			font-size: 24px;
+			}
+			.base{
+				height: 500px;
+				border: 1px solid black;
+				background-image: url(img/a1.jpg);
+				background-repeat:repeat-y;
+				
+				
+				
+		
+			}
+			.footer{
+				height: 80px;
+				background-color: wheat;
+				display: flex;
+ 	    	align-items: center;
+ 	    	justify-content: center;
+ 	    	color: white;
+			}
+			.lunbo{
+				height: 200px;
+				border: 1px solid royalblue;
+			}
+			.cell{
+ 			padding: 20px;
+ 			display: flex;
+ 			flex-wrap: wrap;
+ 			align-items: center;
+ 			justify-content: center;
+ 			padding:20px;
+ 			
+ 		
+ 		}
+ 		.yhm{
+ 			display: flex;
+ 			align-items: center;
+ 			justify-content: center;
+ 		}
+ 		.mm{
+ 			display: flex;
+ 			align-items: center;
+ 			justify-content: center;
+ 			margin: 20px;
+ 		}
+ .zong{
+ 	margin: 70px;
+ 
+ }
+  .aa{
+ 	    	background-color: royalblue;
+ 	        color: white;
+ 	        width: 120px;
+ 	    }
+ 	    .bb{
+ 	    	background-color: cadetblue;
+ 	    	color: white;
+ 	    
+ 	    }
+ 	    .dl{
+ 	    	display: flex;
+ 	    	align-items: center;
+ 	    	justify-content: center;
+ 	    }
+ 	    .tp{
+ 	    	height: 200px;
+ 	    	width: 100%;
+ 	    }
+ 	     input{
+ 	    	padding: 10px;
+ 	    }
+		</style>
+	</head>
+	
+	<body>
+		<div class="header">
+			南科技学生签到系统注册
+		</div>
+		<div class="base">
+			<div class="center">
+				<div class="lunbo">
+					<img src="img/v1.jpg" class="tp"/>
+				</div>
+				<div class="zong">
+					
+				
+				<div class="yhm">
+					<input type="text"  id="rename" placeholder="请输入用户名:" class="aa"/>
+				</div>
+				<div class="mm">
+					<input type="password"  id="repwd" placeholder="请输入密码:" class="aa"/>
+				</div>
+				<div class="cell">
+	     			
+	     			
+	     			<input type="button" value="用户注册"  id="userrigest" class="bb"/>
+	     	</div>
+	     	<div class="dl">
+	     		<a href="login.html">已有账号去登陆</a>
+	     	</div>
+	     	</div>
+			</div>
+		</div>
+		<div class="footer">
+			客源有限公司
+		</div>
+	</body>
+	<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+	<script type="text/javascript">
+		var  reobjbtn=document.getElementById("userrigest");
+		reobjbtn.onclick=function()
+		{
+			alert("按钮被点击");
+			var renameobj=document.getElementById("rename");
+			var repwdobj=document.getElementById("repwd");
+			alert(renameobj.value+","+repwdobj.value)
+			$.ajax({
+				type:"post",
+				url:"",
+				data:{"rename":renameobj.value,"repwd":repwdobj.value},
+				dataType:"json",
+				success:function(datas)
+				{
+					
+				},
+				fail:function(error)
+		   	{
+		   		alert("失败");
+		   	}
+			});
+		}
+	</script>
+</html>
